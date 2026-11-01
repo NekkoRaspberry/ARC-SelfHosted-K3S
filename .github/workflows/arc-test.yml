@@ -1,14 +1,25 @@
+# Workflow name displayed in GitHub Actions
 name: ARC Runner Test
 
+# Trigger manually from the GitHub Actions interface
 on:
   workflow_dispatch:
 
 jobs:
   test:
+    # Use the self-hosted runner managed by ARC on the Raspberry Pi
     runs-on: nekko-runners
+
     steps:
-      - name: Check runner
+      # Check that the job is running on the expected machine
+      - name: Check Raspberry Pi runner
         run: |
+          # Display a test message
           echo "Hello from the Raspberry Pi K3s runner!"
-          uname -a
+
+          # Display CPU architecture (expected: aarch64)
+          echo "CPU architecture:"
           arch
+
+          # Finish the test
+          echo "Runner test completed successfully!"
