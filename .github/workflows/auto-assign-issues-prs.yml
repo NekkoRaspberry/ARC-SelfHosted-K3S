@@ -21,11 +21,10 @@ jobs:
     steps:
       # Assign the new issue or pull request to DiogoMOKey
       - name: Auto-assign issue
-        uses: pozil/auto-assign-issue@v1
+        # v4 runs on Node.js 24 (v1 used a deprecated Node.js version)
+        uses: pozil/auto-assign-issue@v4
         with:
           # Temporary token created by GitHub for this run only
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           # User to assign
           assignees: DiogoMOKey
-          # Number of users to assign
-          numOfAssignee: 1
