@@ -1,0 +1,14 @@
+name: ARC Runner Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: nekko-runners
+    steps:
+      - name: Check runner
+        run: |
+          echo "Hello from the Raspberry Pi K3s runner!"
+          uname -a
+          arch
