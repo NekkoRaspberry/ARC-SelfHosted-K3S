@@ -1,3 +1,8 @@
+![Auto Assign](https://github.com/NekkoRaspberry/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
+
+![Proof HTML](https://github.com/NekkoRaspberry/demo-repository/actions/workflows/proof-html.yml/badge.svg)
+
+
 # ARC-SelfHosted-K3S
 
 A self-hosted GitHub Actions runner running on a Raspberry Pi 4, managed by K3s and Actions Runner Controller (ARC).
