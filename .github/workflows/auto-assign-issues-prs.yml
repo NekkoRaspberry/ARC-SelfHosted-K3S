@@ -1,0 +1,31 @@
+# Workflow name displayed in GitHub Actions
+name: Auto Assign Issues and PRs
+
+# Trigger when a new issue or pull request is opened
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  run:
+    # Use a GitHub-hosted runner (not the Raspberry Pi)
+    runs-on: ubuntu-latest
+
+    # Only allow this job to edit issues and pull requests
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      # Assign the new issue or pull request to DiogoMOKey
+      - name: Auto-assign issue
+        uses: pozil/auto-assign-issue@v1
+        with:
+          # Temporary token created by GitHub for this run only
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          # User to assign
+          assignees: DiogoMOKey
+          # Number of users to assign
+          numOfAssignee: 1

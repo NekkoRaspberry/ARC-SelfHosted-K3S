@@ -1,0 +1,20 @@
+# Workflow name displayed in GitHub Actions
+name: HTML Link Checker
+
+# Trigger on every push, or manually from the GitHub Actions interface
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Use a GitHub-hosted runner (not the Raspberry Pi)
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check HTML files for broken links, missing images and invalid HTML
+      # (read-only: it does not change any files)
+      - uses: anishathalye/proof-html@v1.1.0
+        with:
+          # Folder to check (./ = whole repository)
+          directory: ./
