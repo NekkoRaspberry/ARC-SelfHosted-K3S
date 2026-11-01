@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K3S Adventure</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+    }
+    h1 { color: #c51a4a; }
+    code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>K3S Adventure</h1>
+  <p>Self-hosted GitHub Actions runners (ARC) on a Raspberry Pi 4 running K3s.</p>
+
+  <h2>Setup</h2>
+  <ul>
+    <li>Device: Raspberry Pi 4 Model B (8 GB)</li>
+    <li>OS: Raspberry Pi OS Lite 64-bit</li>
+    <li>Kubernetes: K3s</li>
+    <li>Runners: Actions Runner Controller, label <code>nekko-runners</code></li>
+  </ul>
+
+  <h2>Workflows</h2>
+  <ul>
+    <li><strong>ARC Runner Test</strong> checks that the Pi runner works</li>
+    <li><strong>Auto Assign Issues and PRs</strong> assigns new issues and PRs</li>
+    <li><strong>HTML Link Checker</strong> checks this page for broken links</li>
+  </ul>
+</body>
+</html>
