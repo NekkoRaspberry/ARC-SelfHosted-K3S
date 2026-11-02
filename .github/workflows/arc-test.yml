@@ -8,7 +8,7 @@ on:
 jobs:
   test:
     # Use the self-hosted runner managed by ARC on the Raspberry Pi
-    # runs-on: nekko-runners  # Only when it is registered as private repository GitHub Actions
+    # runs-on: nekko-runners  #  nekko-runners requires a private repository.
     runs-on: ubuntu-latest
 
     steps:
